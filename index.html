@@ -15,6 +15,100 @@
       box-sizing: border-box;
       font-family: 'Tajawal', sans-serif;
     }
+    @media (max-width: 900px) {
+        header {
+            padding: 20px 5%;
+        }
+        .products {
+            padding: 0 5%;
+            gap: 25px;
+        }
+        .contact {
+            padding: 40px 5%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        header {
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px 2%;
+        }
+        header h1 {
+            font-size: 24px;
+        }
+        nav a {
+            margin: 0 8px;
+            font-size: 15px;
+        }
+        .hero h2 {
+            font-size: 28px;
+        }
+        .hero p {
+            font-size: 16px;
+        }
+        .section-title {
+            font-size: 22px;
+            margin: 35px 0 18px;
+        }
+        .products {
+            grid-template-columns: 1fr;
+            gap: 18px;
+            padding: 0 2%;
+        }
+        .card img {
+            height: 140px;
+        }
+        .card-content {
+            padding: 12px;
+        }
+        .contact {
+            padding: 25px 2%;
+        }
+        .contact .icons a {
+            padding: 10px;
+            font-size: 17px;
+        }
+        footer {
+            font-size: 12px;
+            padding: 12px;
+        }
+    }
+    /* Custom responsive tweaks */
+    @media (max-width: 400px) {
+        .hero h2 {
+            font-size: 20px;
+        }
+        .section-title {
+            font-size: 16px;
+        }
+        .card img {
+            height: 90px;
+        }
+    }
+    @media (max-width: 300px) {
+        header h1 {
+            font-size: 20px;
+        }
+        nav a {
+            font-size: 14px;
+        }
+        .hero h2 {
+            font-size: 18px;
+        }
+        .hero p {
+            font-size: 14px;
+        }
+        .section-title {
+            font-size: 14px;
+        }
+        .card img {
+            height: 80px;
+        }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: #0a0a0a;
@@ -223,7 +317,7 @@
   </header>
 
   <section class="hero">
-    <h2>نبيع ونصلح أحدث أجهزة اللابتوب</h2>
+    <h2>لبيع وتصليح أحدث أجهزة اللابتوب</h2>
     <p>معتمدون داخل مول البستان | نخدم الأفراد والشركات على أعلى مستوى</p>
   </section>
 
