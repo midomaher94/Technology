@@ -337,12 +337,11 @@
         alert('السلة فارغة 😢');
         return;
       }
-      const order = cart.map((item, i) => `${i + 1}. ${item.name} - ${item.specs}`).join('\n');
-      const phone = '201234567890';
-      const msg = encodeURIComponent(`أرغب في حجز المنتجات التالية:\n${order}`);
-      const url = `https://wa.me/${phone}?text=${msg}`;
-      window.open(url, '_blank');
-    }
+     const order = cart.map((item, i) => `${i + 1}. ${item.name} - ${item.specs}`).join('\n');
+     const phone = '201116320027'; // الرقم بدون مسافات أو +
+     const msg = encodeURIComponent(`أرغب في حجز المنتجات التالية:\n${order}`);
+     const url = `https://wa.me/${phone}?text=${msg}`;
+     window.open(url, '_blank');
 
     // Show/hide return to top
     window.onscroll = () => {
