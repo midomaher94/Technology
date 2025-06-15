@@ -239,7 +239,6 @@
         <li><a href="#top">الرئيسية</a></li>
         <li><a href="#services">الخدمات</a></li>
         <li><a href="#products">المنتجات</a></li>
-        <li><a href="#cart">السلة</a></li>
       </ul>
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
@@ -255,11 +254,7 @@
     <h1>Saber Technology</h1>
     <p>بيع وصيانة اللابتوبات بجودة عالية وخدمة عملاء ممتازة</p>
     <button class="btn-main" onclick="scrollToSection('services')">ابدأ الآن</button>
-    <div class="social-icons">
-      <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-      <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
-      <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-    </div>
+    
   </header>
 
   <section class="section" id="services">
@@ -290,6 +285,12 @@
   <footer>
     <p>© 2025 Saber Technology - جميع الحقوق محفوظة</p>
     <p><a href="tel:+201234567890">اتصل بنا</a> | <a href="mailto:info@sabertech.com">راسلنا</a></p>
+    <div class="social-icons">
+  <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+  <a href="https://wa.me/201116320027" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a>
+  <a href="hsabertrade2023@gmail.com" target="_blank"><ion-icon name="logo-google"></ion-icon></a>
+</div>
+
   </footer>
 
   <!-- Scripts -->
@@ -332,27 +333,29 @@
       }
     };
 
-    function confirmOrder() {
-      if (cart.length === 0) {
-        alert('السلة فارغة 😢');
-        return;
-      }
-     const order = cart.map((item, i) => `${i + 1}. ${item.name} - ${item.specs}`).join('\n');
-     const phone = '201116320027'; // الرقم بدون مسافات أو +
-     const msg = encodeURIComponent(`أرغب في حجز المنتجات التالية:\n${order}`);
-     const url = `https://wa.me/${phone}?text=${msg}`;
-     window.open(url, '_blank');
+   function confirmOrder() {
+  if (cart.length === 0) {
+    alert('السلة فارغة 😢');
+    return;
+  }
+  const order = cart.map((item, i) => `${i + 1}. ${item.name} - ${item.specs}`).join('\n');
+  const phone = '201116320027'; // الرقم بدون مسافات أو +
+  const msg = encodeURIComponent(`أرغب في حجز المنتجات التالية:\n${order}`);
+  const url = `https://wa.me/${phone}?text=${msg}`;
+  window.open(url, '_blank');
+}
 
-    // Show/hide return to top
-    window.onscroll = () => {
-      const btn = document.querySelector('.to-top');
-      if (window.scrollY > 300) btn.style.display = 'block';
-      else btn.style.display = 'none';
-    }
+// ✅ خارج confirmOrder
+window.onscroll = () => {
+  const btn = document.querySelector('.to-top');
+  if (window.scrollY > 300) btn.style.display = 'block';
+  else btn.style.display = 'none';
+};
 
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
   </script>
 </body>
 </html>
